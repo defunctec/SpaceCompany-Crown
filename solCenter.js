@@ -11,6 +11,7 @@ function unlockPlasmaResearch(){
 		Game.tech.unlockTech("unlockPlasma");
 		newUnlock("research");
 		buttonsHidden.push("researchPlasma");
+		oncePlasmaResearch();
 	}
 }
 
@@ -23,6 +24,7 @@ function unlockEmcResearch(){
 		Game.tech.unlockTech("unlockEmc");
 		newUnlock("research");
 		buttonsHidden.push("researchEmc");
+		onceEmcResearch();
 	}
 }
 
@@ -35,6 +37,7 @@ function unlockDysonResearch(){
 		Game.tech.unlockTech("unlockDyson");
 		newUnlock("research");
 		buttonsHidden.push("researchDyson");
+		onceDysonResearch();
 	}
 }
 

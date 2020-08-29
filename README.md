@@ -3,7 +3,25 @@ Space Company is a science-fiction incremental game where you start from humble 
 
 Currently, the game is in Beta, which means there is frequent, active development on the game and most bugs from existing features will have been fixed. You should not have to worry about your saves being wiped. However, there will be the occasional bug and I will endeavour to amend these.
 
-# Plans for the Future
+# Crown Integration
+Crown(CRW) is a crypto currency.
+We've added numerous functions to trigger Crown payments to a user's Crown address while playing.
+Download the Electrum wallet to obtain a wallet address quick or download the full desktop QT wallet here
+https://crownplatform.com/wallet
+
+Crown's website can be found here https://crownplatform.com/
+
+SpaceCompany-Crown is maintained by "defunctec" who you can find in the Crown discord here
+http://discord.crownplatform.com/
+
+# Plans for the Future (Crown)
+Non fungible token achievements which players can collect.
+Adjustments to costs.
+Adjustments to payouts.
+New images.
+Lore improvements
+
+# Plans for the Future (Original)
 - Check https://www.reddit.com/r/SpaceCompany/wiki/futureplans
 - When loading game, the tab you left on is the tab you now start on
 - Random Events
@@ -32,7 +50,7 @@ v0.5.1
 - Rebalance Science
 - Change Icons (white circle with icon inside)
 
-# Changelog:
+# Changelog: Crown
 
 ### v0.5.1 (includes all V0.5.0.X)
 ##### Features

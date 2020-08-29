@@ -1,4 +1,4 @@
-// Wonders Tab
+ // Wonders Tab
 function updateWonderCost(){
     preciousGemCost = preciousGemBaseCost * floor1Price;
     preciousSilverCost = preciousSilverBaseCost * floor1Price;
@@ -192,6 +192,7 @@ function unlockTier3(){
 	document.getElementById("hydrogenTier3").className = "";
 	document.getElementById("heliumTier3").className = "";
 	document.getElementById("iceTier3").className = "";
+	onceTier3();
 }
 
 function unlockTier4(){
@@ -211,6 +212,7 @@ function unlockTier4(){
 	document.getElementById("hydrogenTier4").className = "";
 	document.getElementById("heliumTier4").className = "";
 	document.getElementById("iceTier4").className = "";
+	onceTier4();
 }
 
 function unlockTier5(){
@@ -230,6 +232,7 @@ function unlockTier5(){
 	document.getElementById("hydrogenTier5").className = "";
 	document.getElementById("heliumTier5").className = "";
 	document.getElementById("iceTier5").className = "";
+	onceTier5();
 }
 
 function removeTier5(){
@@ -282,6 +285,7 @@ function achievePreciousWonder(){
 		buttonsHidden.push("preciousProgress", "preciousWonderButton");
 		resourcesUnlocked.push("preciousWonderNav", "wonderFloor1Nav");
         Game.statistics.add('wondersBuilt');
+		oncePrecious()
 	}
 }
 
@@ -300,6 +304,7 @@ function activatePreciousWonder(){
 		activated.push("precious");
         Game.statistics.add('wondersActivated');
 		newUnlock("resources");
+		oncePreciousAct()
 	}
 }
 
@@ -314,6 +319,7 @@ function achieveEnergeticWonder(){
 		buttonsHidden.push("energeticProgress", "energeticWonderButton");
 		resourcesUnlocked.push("energeticWonderNav");
         Game.statistics.add('wondersBuilt');
+        onceEnergetic();
 	}
 }
 
@@ -332,6 +338,7 @@ function activateEnergeticWonder(){
 		activated.push("energetic");
         Game.statistics.add('wondersActivated');
 		newUnlock("resources");
+		onceEnergeticAct();
 	}
 }
 
@@ -346,6 +353,7 @@ function achieveTechWonder(){
 		buttonsHidden.push("techProgress", "techWonderButton");
 		resourcesUnlocked.push("techWonderNav");
         Game.statistics.add('wondersBuilt');
+        onceTechWonder();
 	}
 }
 
@@ -363,6 +371,7 @@ function activateTechWonder(){
 		activated.push("tech");
         Game.statistics.add('wondersActivated');
 		newUnlock("resources");
+		onceTechWonderAct();
 	}
 }
 
@@ -377,6 +386,7 @@ function achieveMeteoriteWonder(){
 		buttonsHidden.push("meteoriteProgress", "meteoriteWonderButton");
 		resourcesUnlocked.push("meteoriteWonderNav");
         Game.statistics.add('wondersBuilt');
+        onceMeteoriteWonder();
 	}
 }
 
