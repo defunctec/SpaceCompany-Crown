@@ -1049,9 +1049,11 @@ function refreshResearches(){
         document.getElementById("gemStorageUpgrade").className = "";
         document.getElementById("charcoalStorageUpgrade").className = "";
         document.getElementById("woodStorageUpgrade").className = "";
+        oncePerStorage();
     }
     if (Game.tech.isPurchased('unlockSolar')) {
         document.getElementById("solarPower").className = "";
+        oncePerSolar();
     }
     if (Game.tech.isPurchased('unlockMachines')) {
         document.getElementById("oilTier2").className = "";
@@ -1059,6 +1061,7 @@ function refreshResearches(){
         document.getElementById("gemTier2").className = "";
         document.getElementById("charcoalTier2").className = "";
         document.getElementById("woodTier2").className = "";
+        oncePerMachines();
     }
     if (Game.tech.isPurchased('unlockDestruction')) {
         for(i = 0; i < document.getElementsByClassName("destroy").length; i++){
@@ -1070,6 +1073,7 @@ function refreshResearches(){
             if(Game.tech.isPurchased('unlockMachines')) {
                 document.getElementById('unlockDestruction').className = "";
                 Game.tech.unlockTech('unlockDestruction');
+                oncePerDestruction();
             }
         }
     }
@@ -1077,16 +1081,19 @@ function refreshResearches(){
         if (Game.tech.isUnlocked('unlockRocketFuelT2') === false) {
             document.getElementById('unlockRocketFuelT2').className = "";
             Game.tech.unlockTech('unlockRocketFuelT2');
+
         }
         if (Game.tech.isUnlocked('unlockLabT2') === false) {
             document.getElementById('unlockLabT2').className = "";
             Game.tech.unlockTech('unlockLabT2');
+            oncePerLabT2();
         }
     }
     if (Game.tech.isPurchased('unlockRocketFuelT2')) {
         if (Game.tech.isUnlocked('unlockRocketFuelT3') === false) {
             document.getElementById('unlockRocketFuelT3').className = "";
             Game.tech.unlockTech('unlockRocketFuelT3');
+            oncePerRocketFuelT3();
         }
     }
     if (Game.tech.isPurchased('unlockLabT2')) {
@@ -1097,6 +1104,7 @@ function refreshResearches(){
         if (Game.tech.isUnlocked('unlockLabT4') === false) {
             document.getElementById('unlockLabT4').className = "";
             Game.tech.unlockTech('unlockLabT4');
+            oncePerLabT4();
         }
     }
     if (Game.tech.isPurchased('unlockLabT4')) {
@@ -1106,12 +1114,14 @@ function refreshResearches(){
         if (Game.tech.isUnlocked('unlockBatteries') === false) {
             document.getElementById('unlockBatteries').className ="";
             Game.tech.unlockTech('unlockBatteries');
+            oncePerBatt();
         }
     }
     if (Game.tech.isPurchased('unlockEmc')) {
         if (Game.tech.isUnlocked('unlockMeteorite') === false) {
             document.getElementById('unlockMeteorite').className = "";
             Game.tech.unlockTech('unlockMeteorite');
+            oncePerMeteorite();
         }
     }
     if (Game.tech.isPurchased('unlockMeteorite')) {
@@ -1169,6 +1179,7 @@ function refreshResearches(){
         if (Game.tech.isUnlocked('unlockDysonSphere') === false) {
             document.getElementById('unlockDysonSphere').className ="";
             Game.tech.unlockTech('unlockDysonSphere');
+            oncePerDyson();
         }
     }
     if (Game.tech.isPurchased('unlockBasicEnergy')) {

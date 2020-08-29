@@ -1,4 +1,4 @@
-// Solar System Tab
+ // Solar System Tab
 
 function getChemicalPlant(){
 	if(metal >= chemicalPlantMetalCost && gem >= chemicalPlantGemCost && oil >= chemicalPlantOilCost){
@@ -53,6 +53,7 @@ function getRocket(){
 		document.getElementById("rocket").textContent = "Built";
 		document.getElementById("rocketRocketCost").className = "";
 		document.getElementById("solarRocket").className = "hidden";
+		onceRocket();
 	}
 }
 
@@ -68,6 +69,7 @@ function launchRocket(){
 		document.getElementById("mars").className = "inner";
 		document.getElementById("asteroidBelt").className = "inner";
 		rocketLaunched = true;
+		onceLaunch();
 	}
 }
 
@@ -97,10 +99,15 @@ function explore(planet){
 			case "Moon":
 				document.getElementById("collapseInnerPlanet").className = "collapseInnerPlanet";
 				resourcesUnlocked.push("collapseInnerPlanet");
+				onceMoon()
 				break;
 			case "Venus":
 				document.getElementById("methanePower").className = "";
 				resourcesUnlocked.push("methanePower");
+				onceVenus()
+				break;
+			case "Mars":
+				onceMars()
 				break;
 			case "AsteroidBelt":
 				document.getElementById("wonderStation").className = "inner";
@@ -111,6 +118,7 @@ function explore(planet){
 				document.getElementById("neptune").className = "outer";
 				document.getElementById("pluto").className = "outer";
 				document.getElementById("kuiperBelt").className = "outer";
+				onceAsteroid()
 				break;
 			case "WonderStation":
 				document.getElementById("wonderTab").className = "";
@@ -118,16 +126,25 @@ function explore(planet){
 				Game.statistics.add('tabsUnlocked');
 				newUnlock("wonder");
 				Game.notifySuccess("New Tab!", "You've unlocked the Wonders Tab!");
+				onceWonder()
 				break;
 			case "Jupiter":
 				document.getElementById("collapseOuterPlanet").className = "collapseOuterPlanet";
 				document.getElementById("fusionPower").className = "";
 				resourcesUnlocked.push("collapseOuterPlanet", "fusionPower");
+				onceJupiter()
+				break;
+			case "Saturn":
+				onceSaturn()
+				break;
+			case "Pluto":
+				oncePluto()
 				break;
 			case "KuiperBelt":
 				document.getElementById("solCenter").className = "outer";
 				resourcesUnlocked.push("solCenter");
 				refreshResources();
+				onceKuiper()
 				break;
 			case "SolCenter":
 				document.getElementById("solCenterTopTab").className = "";
@@ -136,6 +153,7 @@ function explore(planet){
 				Game.statistics.add('tabsUnlocked');
 				newUnlock("solCenter");
 				Game.notifySuccess("New Tab!", "You've unlocked the Sol Center Tab!");
+				onceSol()
 				break;
 		}
 

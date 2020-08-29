@@ -94,8 +94,8 @@ function upgradeUraniumStorage(){
 		Game.resources.takeResource(RESOURCE.Lunarite, getStorage(RESOURCE.Uranium)/2.5*storagePrice);
 		uraniumStorage = uraniumNextStorage;
 		uraniumNextStorage *= 2;
-	}
-}
+			}
+		}
 
 function upgradeOilStorage(){
 	if(getResource(RESOURCE.Oil) >= getStorage(RESOURCE.Oil)*storagePrice && getResource(RESOURCE.Metal) >= getStorage(RESOURCE.Oil)/2.5*storagePrice){
@@ -723,6 +723,7 @@ function getBattery(){
 		battery += 1;
 		updateCost();
 		Game.statistics.add('tierOwned1');
+		onceGetBatt();
 	}
 }
 
@@ -734,6 +735,7 @@ function getBatteryT2(){
 		batteryT2 += 1;
 		updateCost();
 		Game.statistics.add('tierOwned2');
+		onceGetBatt2();
 	}
 }
 
@@ -745,6 +747,7 @@ function getBatteryT3(){
 		batteryT3 += 1;
 		updateCost();
 		Game.statistics.add('tierOwned3');
+		onceGetBatt3();
 	}
 }
 
@@ -756,6 +759,7 @@ function getBatteryT4(){
 		batteryT4+=1;
 		updateCost();
 		Game.statistics.add('tierOwned4');
+		onceGetBatt4();
 	}
 }
 
@@ -767,6 +771,7 @@ function getBatteryT5(){
 		batteryT5+=1;
 		updateCost();
 		Game.statistics.add('tierOwned5');
+		onceGetBatt5();
 	}
 }
 
