@@ -11,15 +11,49 @@ https://crownplatform.com/wallet
 
 Crown's website can be found here https://crownplatform.com/
 
+If you intend to run your own version of SpaceCompany-Crown, here's what you'll need.  
+- An Ubuntu server with at least 2GB RAM, 1-2 Cores with 30GB hard disk minimum. 
+- A LAMP server install.
+- An installation of Wordpress. 
+- An installation of the Ultimate Member Plugin 
+- A custom registration box created in the Ultimate Member form section called 
+"get_user_crown_address". 
+- This is where the user will input their Crown address.
+
+You also need a crown client running on the server, install script 
+```
+sudo apt-get install curl -y && curl -s https://raw.githubusercontent.com/Crowndev/crowncoin/master/scripts/crown-server-install.sh | bash -s
+```
+
+and setup the RPC user and password here
+```
+sudo nano /root/.crown/crown.conf
+```
+```
+testnet=0
+maxconnections=12
+server=1
+rpcuser=RPCPASS
+rpcpassword=RPCUSER
+rpcport=9341
+```
+- Replace the RPCUSER and RPCPASS details in all `private/*.php` files.
+- Backup and encrypt the wallet.
+- Obtain the 0 address of the wallet, using
+```
+sudo crown-cli getaccountaddress 0
+```
+- Send some Crown to the address.
+
 SpaceCompany-Crown is maintained by "defunctec" who you can find in the Crown discord here
 http://discord.crownplatform.com/
 
 # Plans for the Future (Crown)
-Non fungible token achievements which players can collect.
-Adjustments to costs.
-Adjustments to payouts.
-New images.
-Lore improvements
+- Non fungible token achievements which players can collect.
+- Adjustments to costs.
+- Adjustments to payouts.
+- New images.
+- Lore improvements
 
 # Plans for the Future (Original)
 - Check https://www.reddit.com/r/SpaceCompany/wiki/futureplans
