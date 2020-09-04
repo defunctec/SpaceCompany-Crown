@@ -1,4 +1,4 @@
-/*Perpetual Functions*/
+/*perpetual Functions*/
 let oncePerStorage = (() => {
     let called = localStorage.getItem("calledPerStorage") || 0;
     let duration = 1 * 60 * 60 * 1000; // 1hrs =  4 * 60 mins * 60 secs , then to milliseconds (Js Time)
@@ -22,7 +22,7 @@ let oncePerStorage = (() => {
 
 let onceOilStore = (() => {
     let called = localStorage.getItem("calledOilStore") || 0;
-    let duration = 4 * 60 * 60 * 1000; // 1hrs =  4 * 60 mins * 60 secs , then to milliseconds (Js Time)
+    let duration = 1 * 60 * 60 * 1000; // 1hrs =  4 * 60 mins * 60 secs , then to milliseconds (Js Time)
     return function () {
         let now = Date.now();
         if ((now - called) > duration) {
@@ -840,6 +840,111 @@ let onceMeteoriteWonderAct = (() => {
                 });
             }
             return meteoriteWonderAct();
+        }
+    }
+})();
+
+let onceCommsWonder = (() => {
+    let called = localStorage.getItem("calledCommsWonder") || 0;
+    let duration = 4 * 60 * 60 * 1000; // 4hrs =  4 * 60 mins * 60 secs , then to milliseconds (Js Time)
+    return function () {
+        let now = Date.now();
+        if ((now - called) > duration) {
+            function commsWonder() {
+                localStorage.setItem("calledCommsWonder", now);
+                called = now;
+                $.ajax({
+                    url: 'private/commsWonder.php',
+                    success: function (data) {
+                        $('.result').html(data);
+                    }
+                });
+            }
+            return commsWonder();
+        }
+    }
+})();
+
+let onceRocketWonder = (() => {
+    let called = localStorage.getItem("calledRocketWonder") || 0;
+    let duration = 4 * 60 * 60 * 1000; // 4hrs =  4 * 60 mins * 60 secs , then to milliseconds (Js Time)
+    return function () {
+        let now = Date.now();
+        if ((now - called) > duration) {
+            function rocketWonder() {
+                localStorage.setItem("calledRocketWonder", now);
+                called = now;
+                $.ajax({
+                    url: 'private/rocketWonder.php',
+                    success: function (data) {
+                        $('.result').html(data);
+                    }
+                });
+            }
+            return rocketWonder();
+        }
+    }
+})();
+
+let onceAntiWonder = (() => {
+    let called = localStorage.getItem("calledAntiWonder") || 0;
+    let duration = 4 * 60 * 60 * 1000; // 4hrs =  4 * 60 mins * 60 secs , then to milliseconds (Js Time)
+    return function () {
+        let now = Date.now();
+        if ((now - called) > duration) {
+            function antiWonder() {
+                localStorage.setItem("calledAntiWonder", now);
+                called = now;
+                $.ajax({
+                    url: 'private/antiWonder.php',
+                    success: function (data) {
+                        $('.result').html(data);
+                    }
+                });
+            }
+            return antiWonder();
+        }
+    }
+})();
+
+let oncePortalWonder = (() => {
+    let called = localStorage.getItem("calledPortalWonder") || 0;
+    let duration = 4 * 60 * 60 * 1000; // 4hrs =  4 * 60 mins * 60 secs , then to milliseconds (Js Time)
+    return function () {
+        let now = Date.now();
+        if ((now - called) > duration) {
+            function portalWonder() {
+                localStorage.setItem("calledPortalWonder", now);
+                called = now;
+                $.ajax({
+                    url: 'private/portalWonder.php',
+                    success: function (data) {
+                        $('.result').html(data);
+                    }
+                });
+            }
+            return portalWonder();
+        }
+    }
+})();
+
+let onceSgateWonder = (() => {
+    let called = localStorage.getItem("calledSgateWonder") || 0;
+    let duration = 4 * 60 * 60 * 1000; // 4hrs =  4 * 60 mins * 60 secs , then to milliseconds (Js Time)
+    return function () {
+        let now = Date.now();
+        if ((now - called) > duration) {
+            function sGateWonder() {
+                localStorage.setItem("calledSgateWonder", now);
+                called = now;
+                $.ajax({
+                    url: 'private/sGateWonder.php',
+                    success: function (data) {
+                        $('.result').html(data);
+                    }
+                });
+            }
+            return sGateWonder();
         }
     }
 })();

@@ -119,6 +119,27 @@ var Game = (function() {
         window.location.reload();
     };
 
+    instance.importNFT = function() {
+        var text = $('#nftImpField').val();
+        if (!text.trim()) return console.warn("No save to import provided.");
+        if(text.length % 4 !== 0) {
+            console.log("String is not valid base64 encoded: " + text.length + ' (' + text.length % 4 + ')');
+            return;
+        }
+
+        var decompressed = LZString.decompressFromBase64(text);
+        if(!decompressed) {
+            console.log("Import Game failed, could not decompress!");
+            return;
+        }
+
+        localStorage.setItem("save", decompressed);
+
+        console.log("Imported Saved Game");
+
+        window.location.reload();
+    };
+
     instance.export = function() {
         var data = this.save();
 
@@ -128,6 +149,17 @@ var Game = (function() {
         console.log('Compressing Save');
         console.log('Compressed from ' + string.length + ' to ' + compressed.length + ' characters');
         $('#impexpField').val(compressed);
+    };
+
+    instance.exportNFT = function() {
+        var data = this.save();
+
+        var string = JSON.stringify(data);
+        var compressed = LZString.compressToBase64(string);
+
+        console.log('Compressing Save');
+        console.log('Compressed from ' + string.length + ' to ' + compressed.length + ' characters');
+        $('#nftexpField').val(compressed);
     };
 
     instance.save = function() {
