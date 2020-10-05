@@ -6659,6 +6659,33 @@
 								</td>
 							</tr>
 							<tr>
+							<td>
+								<h3 class="default btn-link">
+									Save to the Cloud
+								</h3>
+								<button class="btn btn-primary" onclick="Game.exportNFT()">Get Code</button>
+								<br>
+								<form method="post" id=nftSaveForm action="nftSave1.php">
+        							<input type="textarea" name="data" id="nftexpField" style="margin-top:20px; width:300px; height:100px;">
+									<input type="submit" value="Submit to Cloud">
+									<span>
+										You must be logged in.
+									</span>
+								</form> 
+							</td>
+							</tr>
+							<tr>
+							<td>
+								<h3 class="default btn-link">
+									Load from the Cloud
+								</h3>
+								<br>
+								<form method="post" id=nftLoadForm action="nftLoad1.php">
+									<input type="submit" value="Import Code">
+								</form> 
+							</td>
+							</tr>
+							<tr>
 								<td>
 									<h3 class="default btn-link">
 										Import/Export
@@ -6963,6 +6990,12 @@
 									<h2 class="default btn-link">
 										Beginner's Guide
 									</h2>
+										<span>
+										Please understand that to receive Crown(CRW) you need to make an account
+										with <a href="https://newsbunker.org/register/">Newsbunker.org</a>. The form will ask for a Crown address, we suggest the Electrum wallet if you are new to Crypto <a href="https://crownplatform.com/wallet/">Crown Platform</a>
+									</span>
+									<br>
+									<br>
 									<span>
 										This guide will get you from starting the game to activating your first wonder and will be helpful to grasp everything you need to do. You can refer to this guide at anytime while playing by clicking the Help/FAQ tab in the top right and selecting the Getting Started sub-tab.
 									</span>

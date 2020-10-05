@@ -436,6 +436,7 @@ function rebuildCommsWonder(){
 
 		Game.interstellar.getInterstellarData('comms').unlocked = true;
 		Game.interstellar.getInterstellarData('comms').displayNeedsUpdate = true;
+		onceCommsWonder();
 	}
 }
 
@@ -461,6 +462,7 @@ function rebuildRocketWonder(){
 
 		Game.interstellar.getInterstellarData('rocket').unlocked = true;
 		Game.interstellar.getInterstellarData('rocket').displayNeedsUpdate = true;
+		onceRocketWonder();
 	}
 }
 
@@ -488,6 +490,7 @@ function rebuildAntimatterWonder(){
 
 		Game.interstellar.getInterstellarData('antimatter').unlocked = true;
 		Game.interstellar.getInterstellarData('antimatter').displayNeedsUpdate = true;
+		onceAntiWonder();
 	}
 }
 
@@ -505,6 +508,7 @@ function activatePortal(){
 		buttonsHidden.push("activatePortal");
 		activated.push("portalRoom");
 		newUnlock("wonder");
+		oncePortalWonder();
 	}
 }
 
@@ -530,5 +534,6 @@ function rebuildStargate(){
 
 		Game.interstellar.getInterstellarData('stargate').unlocked = true;
 		Game.interstellar.getInterstellarData('stargate').displayNeedsUpdate = true;
+		onceSgateWonder();
 	}
 }
