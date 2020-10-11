@@ -106,10 +106,17 @@ var splashTextArray = ["Venturing Into The Unknown...",
 "Autoclickers strictly discouraged!",
 "Even more in-depth than Kerbal Space Program!",
 "Effects of prolonged exposure to Space Company currently unknown...",
+"Firing photon torpedoes!",
+"Resistance is futile!",
+"You will be tokenised...",
+"Ready, Steady, Go!",
 ];
 var splashText = splashTextArray[Math.floor(Math.random()*splashTextArray.length)];
 
 var currentDate = (new Date()).toString();
+if(currentDate.indexOf("Oct 08") !== -1){
+	splashText = "Happy Crowniversary!";
+}
 if(currentDate.indexOf("Jan 01") !== -1){
 	splashText = "Happy New Year!";
 }
